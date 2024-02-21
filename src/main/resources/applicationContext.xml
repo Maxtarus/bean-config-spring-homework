@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="init">
+
+    <context:component-scan base-package="ru.sber_java_school.spring.task1.data"/>
+
+    <bean id="student1" class="ru.sber_java_school.spring.task1.data.Student">
+        <constructor-arg name="name" value="Nikita"/>
+        <constructor-arg name="academicPerformance">
+            <map>
+                <entry key="MATHEMATICS" value="EXCELLENT"/>
+                <entry key="PHYSICS" value="GOOD"/>
+                <entry key="INFORMATICS" value="GOOD"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="student2" class="ru.sber_java_school.spring.task1.data.Student">
+        <constructor-arg name="name" value="Aleksandr"/>
+        <constructor-arg name="academicPerformance">
+            <map>
+                <entry key="MATHEMATICS" value="UNSATISFACTORY"/>
+                <entry key="PHYSICS" value="UNSATISFACTORY"/>
+                <entry key="INFORMATICS" value="SATISFACTORY"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="student3" class="ru.sber_java_school.spring.task1.data.Student">
+        <constructor-arg name="name" value="Jil"/>
+        <constructor-arg name="academicPerformance">
+            <map>
+                <entry key="MATHEMATICS" value="UNSATISFACTORY"/>
+                <entry key="PHYSICS" value="UNSATISFACTORY"/>
+                <entry key="INFORMATICS" value="UNSATISFACTORY"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean class="ru.sber_java_school.spring.task1.config.ConfigAppContext"/>
+</beans>
