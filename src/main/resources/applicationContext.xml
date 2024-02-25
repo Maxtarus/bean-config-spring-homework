@@ -37,8 +37,8 @@
         <constructor-arg name="academicPerformance">
             <map>
                 <entry key="MATHEMATICS" value="UNSATISFACTORY"/>
-                <entry key="PHYSICS" value="UNSATISFACTORY"/>
-                <entry key="INFORMATICS" value="UNSATISFACTORY"/>
+                <entry key="PHYSICS" value="GOOD"/>
+                <entry key="INFORMATICS" value="EXCELLENT"/>
             </map>
         </constructor-arg>
     </bean>

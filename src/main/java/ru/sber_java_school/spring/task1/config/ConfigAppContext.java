@@ -14,7 +14,7 @@ import java.util.Map;
 @Configuration
 @ComponentScan(basePackages = "ru.sber_java_school.spring.task1.data")
 public class ConfigAppContext {
-    @Bean(initMethod = "init")
+    @Bean
     public Student student1() {
         Map<Subject, Mark> academicPerformance = new HashMap<>();
         academicPerformance.put(Subject.MATHEMATICS, Mark.GOOD);
@@ -23,7 +23,7 @@ public class ConfigAppContext {
         return new Student("Maxim", academicPerformance);
     }
 
-    @Bean(initMethod = "init")
+    @Bean
     public Student student2() {
         Map<Subject, Mark> academicPerformance = new HashMap<>();
         academicPerformance.put(Subject.MATHEMATICS, Mark.SATISFACTORY);
@@ -32,7 +32,7 @@ public class ConfigAppContext {
         return new Student("Jil", academicPerformance);
     }
 
-    @Bean(initMethod = "init")
+    @Bean
     public Student student3() {
         Map<Subject, Mark> academicPerformance = new HashMap<>();
         academicPerformance.put(Subject.MATHEMATICS, Mark.SATISFACTORY);

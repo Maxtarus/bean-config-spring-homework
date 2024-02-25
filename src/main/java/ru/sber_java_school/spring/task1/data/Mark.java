@@ -6,7 +6,7 @@ public enum Mark {
     SATISFACTORY(3),
     UNSATISFACTORY(2);
 
-    private final int digitMark;
+    private int digitMark;
 
     Mark(int digitMark) {
         this.digitMark = digitMark;
